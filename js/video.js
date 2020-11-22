@@ -26,11 +26,11 @@ document.querySelector("#faster").addEventListener("click", function(){
 
 document.querySelector("#skip").addEventListener("click", function(){
 	if (video.duration > video.currentTime + 5) {
-		console.log("skip to " + video.currentTime +" s");
 		video.currentTime += 5;
+		console.log("skip to " + video.currentTime +" s");
 	} else {
-		console.log("go back to " + video.currentTime);
 		video.currentTime = 0;
+		console.log("go back to " + video.currentTime);
 	}
 });
 
