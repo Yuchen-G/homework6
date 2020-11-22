@@ -43,7 +43,19 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 });
 
-document.querySelector("#mute").addEventListener("click", function() {
+document.querySelector("#volumeSlider").addEventListener("change", function() {
+	
+	video.volume = this.value/100;
+	span = document.querySelector("#volume");
 	console.log("volume changed to " + video.volume);
-	// video.volume = 
+});
+
+document.querySelector("#old").addEventListener("click", function() {
+	document.querySelector("#myVideo").setAttribute('class', 'oldTime');
+	console.log("set video to Old style");
+});
+
+document.querySelector('#original').addEventListener("click", function() {
+	document.getElementById('myVideo').removeAttribute('class', 'oldTime');
+	console.log("set video to Original style");
 });
